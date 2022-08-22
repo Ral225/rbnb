@@ -9,7 +9,7 @@ class ParkingSlot < ApplicationRecord
   validates :price, presence: true
   validates :title, presence: true, length: { maximum: 50 }
   validates :description, presence: true, length: { maximum: 500 }
-  validates :vehicule_type, presence: true
+  validates :vehicle_type, presence: true
   validates :weather_protection, presence: true
   validates :security, presence: true
   validates :currency, presence: true

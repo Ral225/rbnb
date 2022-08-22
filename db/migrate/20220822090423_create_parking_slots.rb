@@ -8,7 +8,7 @@ class CreateParkingSlots < ActiveRecord::Migration[7.0]
       t.string :title
       t.text :description
       t.string :vehicle_type
-      t.string :wheather_protection
+      t.string :weather_protection
       t.string :security
       t.string :currency
       t.references :user, null: false, foreign_key: true

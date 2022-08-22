@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_22_093852) do
     t.string "title"
     t.text "description"
     t.string "vehicle_type"
-    t.string "wheather_protection"
+    t.string "weather_protection"
     t.string "security"
     t.string "currency"
     t.bigint "user_id", null: false
