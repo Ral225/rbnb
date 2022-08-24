@@ -1,11 +1,14 @@
 .button {
  height: 42px;
+ border: none;
  min-width: 130px;
  background: $blue;
- padding: 14px 30px;
  text-decoration: none;
+ text-align: center;
+ align-items: center;
  border-radius: 50px;
  color: white;
+ display: inline-block;
  transition: all 0.5s ease;
 }
 
