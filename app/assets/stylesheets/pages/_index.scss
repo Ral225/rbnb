@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "parkingslot";
 .placeholder-map {
     background-image: url("index_map_placeholder.png");
     background-size: cover;
@@ -7,4 +8,10 @@
     background-repeat:no-repeat;
     height: 100%;
     width: 100%;
+    border-radius: 20px;
+}
+
+.container {
+  min-height: 100%;
+  height: 100%;
 }
