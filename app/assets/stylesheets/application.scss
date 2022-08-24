@@ -38,7 +38,7 @@ p {
 }
 
 a {
- color: #888;
+ color: $black;
 }
 
 .row {
@@ -51,8 +51,11 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
-  height: 80vh;
+  height: 72vh;
   width: 100%;
   border-radius: 20px;
 }
 
+.container {
+  margin-top: 30px;
+}
