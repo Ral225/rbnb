@@ -11,6 +11,31 @@
 @import "components/index";
 @import "pages/index";
 
-// H1 H1 p
 
-// main-container
+// Basic styling
+
+
+body {
+  font-family: Verdana, sans-serif;
+  color: $black;
+}
+
+h1 {
+  font-size: 26px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+ color: #888;
+}
