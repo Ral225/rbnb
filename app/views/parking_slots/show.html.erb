@@ -1,30 +1,40 @@
-<div class="image-container">
-  <div class="image">
+<div class="container">
+  <div class="image-container d-flex justify-content-between mb-3">
+    <div class="image">
+      <img src="https://media.istockphoto.com/photos/dealer-new-cars-stock-picture-id480652712?k=20&m=480652712&s=612x612&w=0&h=dbyTkQ3-PJJMAlNAR2hGxPWX1ODvSJspuDsdvQmOKlI=" class="img-fluid" alt="...">
+    </div>
+    <div class="map">
+      <img src="https://media.istockphoto.com/photos/dealer-new-cars-stock-picture-id480652712?k=20&m=480652712&s=612x612&w=0&h=dbyTkQ3-PJJMAlNAR2hGxPWX1ODvSJspuDsdvQmOKlI=" class="img-fluid" alt="...">
+    </div>
   </div>
-  <div class="map">
-  </div>
-</div>
-<div class="product-container">
-  <div class="description-container">
-    <h2>title</h2>
-      <p>desciption</p>
-      <p>address</p>
-      <p>widht</p>
-      <p>height</p>
-      <p>security item</p>
-  </div>
-  <div class="booking-container">
-    <h2>Price per jour</h2>
-    <div class="check-box-container">
-      <div class="check-in-box">
-        <p>date in</p>
+  <div class="product-container d-flex justify-content-between">
+    <div class="description-container">
+     <h2> <%= @parkingslot.title %></h2>
+        <p><%= @parkingslot.description %></p>
+        <p><%= @parkingslot.address %></p>
+        <p><%= @parkingslot.width %></p>
+        <p><%= @parkingslot.height %></p>
+        <p><%= @parkingslot.security %></p>
+    </div>
+    <div class="booking-container">
+      <h2>Price per jour</h2>
+      <div class="check-box-container d-flex justify-content-center">
+        <div class="check-in-box">
+          <p>date in</p>
+        </div>
+        <div class="check-out-box">
+          <p>date out</p>
+        </div>
       </div>
-      <div class="check-out-box">
-        <p>date out</p>
-      </div>
-      <div class="primary-btn"></div>
-      <div class="booking-resume-container">
-      </div>
+        <div class="button-wrapper">
+              <button type="button" class="btn btn-primary btn-sm d-flex">Make a reservation</button>
+        </div>
+        <div class="booking-resume-container">
+          <p>You won't be charged yet</p>
+          <p>12€ x 5 days</p>
+          <p>------------------------</p>
+          <p class ="line">Total = 60 €</p>
+        </div>
     </div>
   </div>
 </div>
