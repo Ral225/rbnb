@@ -1,0 +1,18 @@
+.background-gradient {
+  background-image: linear-gradient(to top left, $blue, $green);
+}
+
+
+#main {
+  position: relative;
+  top: -20px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+h1 {
+  color: white;
+  font-weight: semi-bold;
+  text-align: center;
+}
