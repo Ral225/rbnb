@@ -13,6 +13,10 @@
 
 
 // Basic styling
+html,body {
+  padding-top: 0px;
+  margin-top: 0px;
+}
 
 body {
   font-family: Verdana, sans-serif;
@@ -38,7 +42,7 @@ p {
 }
 
 a {
- color: #888;
+ color: $black;
 }
 
 .row {
@@ -51,8 +55,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
-  height: 80vh;
+  height: 73vh;
   width: 100%;
   border-radius: 20px;
 }
-
