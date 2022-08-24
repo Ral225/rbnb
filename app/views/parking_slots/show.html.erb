@@ -11,13 +11,13 @@
     <div class="description-container">
      <h2> <%= @parkingslot.title %></h2>
         <p><%= @parkingslot.description %></p>
-        <p><%= @parkingslot.address %></p>
-        <p><%= @parkingslot.width %></p>
-        <p><%= @parkingslot.height %></p>
-        <p><%= @parkingslot.security %></p>
+        <p>Location : <%= @parkingslot.address %></p>
+        <p> Width : <%= @parkingslot.width %> - Height: <%= @parkingslot.height %> </p>
+        <p> Security items : <%= @parkingslot.security %></p>
+        <p> Price per day : <%= @parkingslot.price.round %> <%= @parkingslot.currency %></p>
     </div>
     <div class="booking-container">
-      <h2>Price per jour</h2>
+      <h2> <%= @parkingslot.price.round %> € per day </h2>
       <div class="check-box-container d-flex justify-content-center">
         <div class="check-in-box">
           <p>date in</p>
@@ -31,9 +31,9 @@
         </div>
         <div class="booking-resume-container">
           <p>You won't be charged yet</p>
-          <p>12€ x 5 days</p>
+          <p><%= @parkingslot.price.round %> <%= @parkingslot.currency %> x 5 days</p>
           <p>------------------------</p>
-          <p class ="line">Total = 60 €</p>
+          <p class ="line">Total = <%= @parkingslot.price.round * 5 %> € </p>
         </div>
     </div>
   </div>
