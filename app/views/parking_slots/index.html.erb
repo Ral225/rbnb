@@ -1,20 +1,24 @@
 <div class="container">
   <div>
-    <h1>28 parking slots found near you</h1>
+    <h1><%= @parkingslots.count%> parking slots found near you</h1>
   </div>
   <div class="row">
     <div class="col">
       list items here
   <div class="row" style="height: 100%">
     <div class="col">
-      <div class="card-small">
-        <img src="https://source.unsplash.com/random/200x150/?parking" alt="">
-        <div class="card-small-info">
-            <h2>Safe parking lot</h2>
-            <p>Jl. Munduk Catu No.32, Canggu</p>
-            <p>12€ per day</p>
-        </div>
-      </div>
+      <% @parkingslots.each do  |element| %>
+        <%= link_to parking_slot_path(element), class:"text-decoration-none" do %>
+          <div class="card-small">
+            <img src="https://source.unsplash.com/random/?parking" alt="">
+            <div class="card-small-info">
+              <h2><%= element.title %></h2>
+                <p><%= element.address %></p>
+                <p><%= element.price.to_i %> € per day</p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
     <div class="col">
       <div class="placeholder-map"></div>

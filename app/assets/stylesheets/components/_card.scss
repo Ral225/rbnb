@@ -6,11 +6,13 @@
   display: flex;
   align-items: center;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .card-small img {
   height: 100%;
-  width: 30%;
+  min-width: 30%;
+  max-width: 30%;
   object-fit: cover;
 }
 
@@ -28,6 +30,7 @@
   margin-bottom: 0;
   margin-top: 8px;
 }
+
 
 .card-small .card-small-info {
   margin: 16px;
