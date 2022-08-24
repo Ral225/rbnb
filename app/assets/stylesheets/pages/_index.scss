@@ -1,24 +1,3 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "parkingslot";
-.placeholder-map {
-    background-image: url("index_map_placeholder.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat:no-repeat;
-    height: 100%;
-    max-height: 100vh;
-    width: 100%;
-    border-radius: 20px;
-}
-
-.container {
-  min-height: 100%;
-  height: 100%;
-  padding-top: 20px;
-}
-
-.a {
-  text-decoration: none;
-  color: $black;
-}

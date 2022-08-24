@@ -13,9 +13,9 @@
 
 
 // Basic styling
-html,body {
-  padding-top: 0px;
-  margin-top: 0px;
+html, body {
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -43,11 +43,6 @@ p {
 
 a {
  color: $black;
-}
-
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .placeholder-map {
