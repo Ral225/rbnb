@@ -14,10 +14,11 @@
 
 // Basic styling
 
-
 body {
   font-family: Verdana, sans-serif;
   color: $black;
+  height: 100%;
+  background-color: white;
 }
 
 h1 {
@@ -38,4 +39,9 @@ p {
 
 a {
  color: #888;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }

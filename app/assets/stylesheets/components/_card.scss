@@ -1,0 +1,35 @@
+.card-small {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.card-small img {
+  height: 100%;
+  width: 30%;
+  object-fit: cover;
+}
+
+.card-small h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.card-small p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-small .card-small-info {
+  margin: 16px;
+  max-height: 100%;
+}
