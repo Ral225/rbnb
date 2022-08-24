@@ -1,2 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
+.placeholder-map {
+    background-image: url("index_map_placeholder.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 100%;
+    width: 100%;
+}
