@@ -36,7 +36,6 @@
   .smaller-image {
     width: 23px;
     height: 23px;
-    margin: 5px 5px;
   }
   .nav-item-special-1 {
     margin: 0px 8px;
@@ -46,7 +45,9 @@
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     width: 60px;
-  }
+    text-align: center;
+    top: 5px;
+    }
   .nav-item-special-2 {
     margin: 0px 8px;
     background: #FFFFFF;
@@ -55,8 +56,14 @@
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     width: 60px;
+    text-align: center;
   }
   .btn {
+    border-radius: 20px;
+    color: white;
+  }
+
+  .btn-primary {
     border-radius: 20px;
     color: white;
   }
