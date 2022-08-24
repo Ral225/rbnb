@@ -14,10 +14,11 @@
 
 // Basic styling
 
-
 body {
   font-family: Verdana, sans-serif;
   color: $black;
+  height: 100%;
+  background-color: white;
 }
 
 h1 {
@@ -39,3 +40,19 @@ p {
 a {
  color: #888;
 }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.placeholder-map {
+  background-image: url("index_map_placeholder.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  height: 80vh;
+  width: 100%;
+  border-radius: 20px;
+}
+
