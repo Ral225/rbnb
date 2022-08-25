@@ -1,9 +1,7 @@
+<div class="nav-spacer"></div>
 <div class="container">
-  <div style="padding-left:22px;">
     <h1><%= @parkingslots.count%> parking slots found near you</h1>
-  </div>
-  <div class="row">
-    <div class="col">
+    <div class="car-icon"></div>
   <div class="row" style="height: 100%">
     <div class="col">
       <% @parkingslots.each do  |element| %>
@@ -20,7 +18,11 @@
       <% end %>
     </div>
     <div class="col">
-      <div class="placeholder-map"></div>
+        <div style="width: 612px; height: 399px;"
+            data-controller="map"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+            data-map-markers-value="<%= @markers.to_json %>">
+        </div>
     </div>
   </div>
 </div>

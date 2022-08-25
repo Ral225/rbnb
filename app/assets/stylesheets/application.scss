@@ -13,9 +13,9 @@
 
 
 // Basic styling
-html,body {
-  padding-top: 0px;
-  margin-top: 0px;
+html, body {
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -23,6 +23,9 @@ body {
   color: $black;
   height: 100%;
   background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-flow:column;
 }
 
 h1 {
@@ -45,11 +48,6 @@ a {
  color: $black;
 }
 
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
 .placeholder-map {
   background-image: url("index_map_placeholder.png");
   background-size: cover;
@@ -58,4 +56,9 @@ a {
   height: 73vh;
   width: 100%;
   border-radius: 20px;
+}
+
+.nav-spacer {
+  width: 100%;
+  margin-bottom: 30px;
 }

@@ -1,0 +1,27 @@
+.button {
+ height: 42px;
+ border: none;
+ min-width: 130px;
+ background: $blue;
+ text-decoration: none;
+ text-align: center;
+ align-items: center;
+ border-radius: 50px;
+ color: white;
+ display: inline-block;
+ transition: all 0.5s ease;
+}
+
+.button:hover {
+  background: $blue-green;
+  color:white;
+}
+
+// gradients how to https://www.w3schools.com/css/css3_gradients.asp
+.button-gradient {
+  background-image: linear-gradient(to right, $green, rgba(255,0,0,0));
+ }
+
+ .button-gradient:hover {
+  background-image: linear-gradient(to right, $green 30%, rgba(255,0,0,0));
+}

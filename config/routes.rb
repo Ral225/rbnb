@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :parking_slots, only: [:create, :index, :show, :destroy]
+  resources :parking_slots, only: [:new, :create, :index, :show, :destroy]
 end
