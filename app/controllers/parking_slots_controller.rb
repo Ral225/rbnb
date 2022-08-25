@@ -1,5 +1,5 @@
 class ParkingSlotsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @parkingslots = ParkingSlot.all
       # The `geocoded` scope filters only flats with coordinates
