@@ -25,14 +25,16 @@
               <% end %>
             </li>
             <li class="nav-item-special-1 active">
-              <%= image_tag "car.png", class: "smaller-image" %>
+              <div class="car-icon">
+              </div>
             </li>
             <li class="nav-item-special-2 active">
-              <%= image_tag "motorbike.png", class: "smaller-image" %>
+              <div class="scooter-icon">
+              </div>
             </li>
         </ul>
       <% if user_signed_in? %>
-        <div class="nav-item dropdown padding">
+        <div class="nav-item dropdown little-longer">
         <i class="fa-solid fa-bars"></i>
           <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

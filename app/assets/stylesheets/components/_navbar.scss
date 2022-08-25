@@ -47,6 +47,11 @@
     .padding {
       width: 120px;
     }
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+    }
   }
   .smaller-image {
     width: 23px;
@@ -87,9 +92,15 @@
     width: 120px;
     text-align: center;
     padding: 8px 10px;
+    height: 42px;
   }
 }
 
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .navbar-nav {
   margin-left: auto;
@@ -104,4 +115,5 @@
 
 .fa-solid {
   color: $grey;
+  margin-left: 16% !important;
 }
