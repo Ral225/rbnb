@@ -5,7 +5,7 @@
     </div>
 
     <div class="map col-4">
-      <div style="width: 612px; height: 399px;"
+      <div style="width: auto; height: 399px;"
           data-controller="map"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
           data-map-markers-value="<%= @markers.to_json %>">
@@ -25,22 +25,21 @@
       <h2> <%= @parkingslot.price.round %> € per day </h2>
       <div class="check-box-container d-flex justify-content-center">
           <%= simple_form_for @parkingslot do |parking| %>
-          <div class="check-box-wrapper check-box-container d-flex justify-content-center">
-          <%= parking.input :title, label: 'Check-in', wrapper_html: { class: 'check-in-box' } %>
-          <%= parking.input :title, label: 'Check-out', wrapper_html: { class: 'check-out-box' } %>
-          </div>
-          <div class="button-form-container d-flex justify-content-center">
-          <%= parking.button :submit, 'Make a reservation',  class: "button d-flex"%>
-          </div>
-        <% end %>
-        </div>
-        <div class="booking-resume-container">
-          <p>You won't be charged yet</p>
-          <p><%= @parkingslot.price.round %> <%= @parkingslot.currency %> x 5 days</p>
-          <hr>
-          <p class ="line">Total = <%= @parkingslot.price.round * 5 %> € </p>
-        </div>
+            <div class="check-box-wrapper check-box-container d-flex justify-content-center">
+            <%= parking.input :title, label: 'Check-in', wrapper_html: { class: 'check-in-box' } %>
+            <%= parking.input :title, label: 'Check-out', wrapper_html: { class: 'check-out-box' } %>
+            </div>
+            <div class="button-form-container d-flex justify-content-center">
+            <%= parking.button :submit, 'Make a reservation',  class: "button d-flex"%>
+            </div>
+          <% end %>
+      </div>
+      <div class="booking-resume-container">
+        <p>You won't be charged yet</p>
+        <p><%= @parkingslot.price.round %> <%= @parkingslot.currency %> x 5 days</p>
+        <hr>
+        <p class ="line">Total = <%= @parkingslot.price.round * 5 %> € </p>
+      </div>
     </div>
-  </div>
-
+    </div>
 </div>
