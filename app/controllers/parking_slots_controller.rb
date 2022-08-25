@@ -5,7 +5,8 @@ class ParkingSlotsController < ApplicationController
       # The `geocoded` scope filters only flats with coordinates
       @markers = ParkingSlot.geocoded.map do |parking| {
         lat: parking.latitude,
-        lng: parking.longitude
+        lng: parking.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {parkingslot: parkingslot})
       }
       end
   end
