@@ -35,8 +35,8 @@
         </ul>
       <% if user_signed_in? %>
         <div class="nav-item dropdown little-longer">
-        <i class="fa-solid fa-bars"></i>
-          <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <i class="fa-solid fa-lg fa-bars" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <%= image_tag "avatar.png", class: "avatar dropdown-toggle", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <%= link_to "My listings", "#", class: "dropdown-item" %>
             <%= link_to "My bookings", "#", class: "dropdown-item" %>
@@ -45,7 +45,7 @@
           </div>
         </div>
       <% else %>
-        <%= button_to "Login", new_user_session_path, class: "button" %>
+        <%= button_to "Login", new_user_session_path, method: :get, class: "button" %>
       <% end %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       </div>

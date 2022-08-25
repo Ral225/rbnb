@@ -94,6 +94,13 @@
     padding: 8px 10px;
     height: 42px;
   }
+
+  .dropdown-menu {
+    background: #FFFFFF;
+    border: 1px solid $grey;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
 }
 
 .dropdown {
@@ -121,4 +128,5 @@
 
 i::before {
   height: 25px !important;
+  padding-left: 20%;
 }
