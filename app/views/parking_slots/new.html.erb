@@ -1,6 +1,31 @@
-<div class="row" id="main">
+<div class="container">
+  <%= simple_form_for(@parkingslot) do |f| %>
+  <%# <%= f.input :user_id, collection: User.all %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.label :vehicle_type %>
+  <% vehicle_types = ["car", "motorcycle"] %>
+  <p>
+    <% vehicle_types.each do |vehicle_type| %>
+    <%= f.radio_button :vehicle_type, '#{vehicle_type}' %> Car
+    <%= f.radio_button :vehicle_type, 'motorcylcle' %> Motorcycle
+    <% end %>
+  </p>
+  <%= f.input :security, collection: ParkingSlot::SECURITY %>
+  <%= f.input :width %>
+  <%= f.input :height %>
+  <%= f.input :weather_protection %>
+  <%= f.input :price %>
+  <% currencies = ["Euro", "Dollar", "Rupiah"] %>
+  <%= f.input :currency, collection: currencies %>
+  <%= f.submit %>
+  <% end %>
+</div>
+
+<%# <div class="row" id="main">
 <div class="col d-flex background-gradient justify-content-center align-items-center">
   <h1 class="m-3">Let's get started!</h1>
 </div>
 <div class="col">
-</div>
+</div> %>
