@@ -1,0 +1,12 @@
+.scooter-icon {
+  background-image: url("https://img.icons8.com/ios-filled/50/50A4EB/motorcycle.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat:no-repeat;
+  height: 25px;
+  width: 25px;
+  transition: all 0.5s ease;
+  &:hover {
+    background-image: url("https://img.icons8.com/ios-filled/50/5CC6D0/motorcycle.png");
+  }
+  }

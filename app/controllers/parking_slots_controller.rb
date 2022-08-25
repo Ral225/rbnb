@@ -14,4 +14,7 @@ class ParkingSlotsController < ApplicationController
     @parkingslot = ParkingSlot.find(params[:id])
   end
 
+  def new
+    @parkingslot=ParkingSlot.new
+  end
 end
