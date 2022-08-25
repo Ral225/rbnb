@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def home
   end
 
-  def dashboard
+  def my_listings
+  end
+
+  def my_bookings
   end
 end
