@@ -4,7 +4,11 @@
       <img src="https://media.istockphoto.com/photos/dealer-new-cars-stock-picture-id480652712?k=20&m=480652712&s=612x612&w=0&h=dbyTkQ3-PJJMAlNAR2hGxPWX1ODvSJspuDsdvQmOKlI=" class="img-fluid" alt="...">
     </div>
     <div class="map">
-      <%= image_tag 'index_map_placeholder.png', class: "map-size" %>
+      <div style="width: 399px; height: 308px;"
+          data-controller="map"
+           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+            data-map-markers-value="<%= @markers.to_json %>">
+        </div>
     </div>
   </div>
   <div class="product-container d-flex justify-content-between">
@@ -39,8 +43,3 @@
     </div>
   </div>
 </div>
-
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-map-markers-value="<%= @markers.to_json %>"></div>
