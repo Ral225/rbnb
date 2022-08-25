@@ -11,6 +11,7 @@ class ParkingSlotsController < ApplicationController
   end
 
   def show
+    @rentalrequest = RentalRequest.new
     @parkingslot = ParkingSlot.find(params[:id])
     @markers = ParkingSlot.where(address: @parkingslot.address).geocoded.map do |parking| {
       lat: parking.latitude,
