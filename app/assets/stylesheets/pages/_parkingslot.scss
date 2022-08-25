@@ -1,5 +1,6 @@
 .image-container {
   width: auto;
+  margin-top: 20px;
 }
 
 .map-size{
@@ -29,6 +30,7 @@
   margin-bottom: 20px;
   text-align: center;
   padding: 2px;
+  font-weight: bold;
 
   background: $white;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -44,6 +46,8 @@
   margin-bottom: 20px;
   text-align: center;
   padding: 2px;
+  font-weight: bold;
+
 
   background: $white;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -90,7 +94,3 @@ hr {
   margin-before: 0.5em;
   margin-after: 0.5em;
 }
-
-// .line {
-//   border-top: 1px solid #151515;
-// }
