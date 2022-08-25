@@ -39,6 +39,7 @@
         <p><%= @parkingslot.price.round %> <%= @parkingslot.currency %> x 5 days</p>
         <hr>
         <p class ="line">Total = <%= @parkingslot.price.round * 5 %> € </p>
+        <%= link_to 'make request',  new_parking_slot_rental_request_path(@parkingslot)  %>
       </div>
     </div>
     </div>
