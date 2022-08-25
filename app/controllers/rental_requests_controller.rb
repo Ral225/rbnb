@@ -3,11 +3,11 @@ class RentalRequestsController < ApplicationController
   def new
     @rentalrequest = RentalRequest.new
     @parkingslot = ParkingSlot.find(params[:parking_slot_id])
-    @markers = @parkingslot.geocoded.map do |parking| {
-      lat: parking.latitude,
-      lng: parking.longitude
-    }
-    end
+    # @markers = @parkingslot.geocoded.map do |parking| {
+    #   lat: parking.latitude,
+    #   lng: parking.longitude
+    # }
+    # end
 
   end
 
