@@ -1,5 +1,6 @@
 .container-fluid {
   padding: 0px;
+  align-content: center;
 }
 .navbar-lewagon {
   justify-content: space-between;
@@ -21,10 +22,11 @@
   .nav-item {
     margin: 0px 8px;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
+    border: 1px solid $grey;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
     max-width: 100px;
+    height: 42px;
 
     &:focus-within {
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -43,6 +45,15 @@
     input:focus {
       outline: none;
     }
+
+    .padding {
+      width: 120px;
+    }
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+    }
   }
   .smaller-image {
     width: 23px;
@@ -51,7 +62,7 @@
   .nav-item-special-1 {
     margin-left: 8px;
     background:rgba(0, 0, 0, 0);
-    border: 1px solid #E6E6E6;
+    border: 1px solid $grey;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -59,11 +70,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 42px;
     }
+
   .nav-item-special-2 {
     margin-right: 8px;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
+    border: 1px solid $grey;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -71,6 +84,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 42px;
   }
 
   .longer {
@@ -82,9 +96,23 @@
     width: 120px;
     text-align: center;
     padding: 8px 10px;
+    height: 42px;
+  }
+
+  .dropdown-menu {
+    background: #FFFFFF;
+    border: 1px solid $grey;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
   }
 }
 
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px !important;
+}
 
 .navbar-nav {
   margin-left: auto;
@@ -95,4 +123,36 @@
   border-bottom: solid 1px $grey;
   width: 100%;
   background-color: white;
+}
+
+.fa-solid {
+  color: $grey;
+  margin-left: 16% !important;
+}
+
+i::before {
+  height: 25px !important;
+  padding-left: 20%;
+}
+
+.display-none {
+  display: none;
+}
+
+.mapboxgl-ctrl-geocoder {
+  margin: 0px 8px;
+  background: #FFFFFF;
+  border: 1px solid $grey !important;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 50px !important;
+  max-width: 100px;
+  height: 42px;
+}
+
+.me-auto {
+  padding: 0px !important;
+}
+
+.mapboxgl-ctrl-geocoder--input::placeholder {
+  color: $dark-grey;
 }
