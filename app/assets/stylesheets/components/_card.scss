@@ -7,36 +7,111 @@
   align-items: center;
   border-radius: 20px;
   margin-bottom: 20px;
+  &:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.50);
+  }
+
+  img {
+    height: 100%;
+    min-width: 30%;
+    max-width: 30%;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .card-small-info {
+    margin: 16px;
+    max-height: 100%;
+  }
+
 }
 
-.card-small:hover {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.50);
+.card-large {
+  overflow: hidden;
+  height: 150px;
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  &:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.50);
+  }
+
+  img {
+    height: 100%;
+    // min-width: 20%;
+    // max-width: 20%;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .card-large-info {
+    align-self: flex-start !important;
+    padding:20px;
+    max-height: 100%;
+  }
+
+  .row {
+    width: 100%;
+  }
+
 }
 
-.card-small img {
-  height: 100%;
-  min-width: 30%;
-  max-width: 30%;
-  object-fit: cover;
+
+.card-status {
+  padding: 20px;
+  display: flex;
+  align-self: flex-start !important;
+  background: rgba(255, 0, 0, 0.219);
+  min-height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  p {
+    font-size: 12px;
+    margin: 0px;
+    padding:0;
+    padding-bottom: 5px;
+  }
 }
 
-.card-small h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+.card-status-pending {
+  background: rgba(212, 202, 10, 0.523);
+}
+.card-status-confirmed {
+  background: rgba(67, 204, 33, 0.219);
 }
 
-.card-small p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-
-.card-small .card-small-info {
-  margin: 16px;
-  max-height: 100%;
+.card-status-declined {
+  background: rgba(67, 204, 33, 0.219);
 }

@@ -1,0 +1,24 @@
+<div class="nav-spacer"></div>
+<div class="container">
+  <h1>Your bookings</h1>
+  <% if @bookings %>
+    <%@bookings.each do |booking| %>
+        <div class="card-large">
+          <div class="row"></div>
+          <img src="https://source.unsplash.com/random/?parking" alt="" class="col-3">
+          <div class="card-large-info col-5">
+            <h2><%= booking.parking_slot.title %></h2>
+              <p><%= booking.parking_slot.address %></p>
+              <p><%= booking.parking_slot.price.to_i %> € per day</p>
+          </div>
+          <div class="col-4 card-status card-status-pending" data-controller="card">
+            <p><strong>Booking status:</strong> Pending - your booking request is waiting for approval by the owner.</p>
+            <p><strong>Dates:</strong> <%= booking.start_date %> until <%= booking.end_date %></p>
+            <p><strong>Total: </strong><%= booking.parking_slot.price.to_i * booking.total_amount.to_i%> € (<%= booking.total_amount.to_i %> days x <%= booking.parking_slot.price.to_i %> €)</p>
+          </div>
+        </div>
+    <% end %>
+  <% else %>
+    <p>You currently have no bookings</p>
+  <% end %>
+</div>

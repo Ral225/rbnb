@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :test_user
   before_action :current_user
 
   def configure_permitted_parameters
@@ -13,7 +14,10 @@ class ApplicationController < ActionController::Base
 
   def current_user
     return unless session[:user_id]
+    @current_user ||= User.find(session[:user_id].id)
+  end
 
-    @current_user ||= User.find(session[:user_id])
+  def test_user
+    session[:user_id]=User.first
   end
 end
