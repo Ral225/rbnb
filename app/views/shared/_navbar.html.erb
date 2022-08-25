@@ -9,9 +9,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
         <ul class="navbar-nav me-auto">
-            <li class="nav-item active longer">
-              <%= form_with url: "/search", method: :get, class: "nav-link" do |form| %>
-                <%= form.text_field :query, placeholder: "Where?", class: "no-border" %>
+            <li class="active longer">
+              <%= form_with url: "/search", method: :get, class: "nav-link p-0" do |form| %>
+              <div data-controller="address-autocomplete" data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
+                <%= form.text_field :address, placeholder: "Whddddere?", class: "no-border display-none", data: {address_autocomplete_target: "address"} %>
+              </div>
               <% end %>
             </li>
             <li class="nav-item active">
@@ -25,15 +27,18 @@
               <% end %>
             </li>
             <li class="nav-item-special-1 active">
-              <%= image_tag "car.png", class: "smaller-image" %>
+              <div class="car-icon">
+              </div>
             </li>
             <li class="nav-item-special-2 active">
-              <%= image_tag "motorbike.png", class: "smaller-image" %>
+              <div class="scooter-icon">
+              </div>
             </li>
         </ul>
       <% if user_signed_in? %>
-        <div class="nav-item dropdown">
-          <%= image_tag "logo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="nav-item dropdown little-longer">
+        <i class="fa-solid fa-lg fa-bars" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <%= image_tag "avatar.png", class: "avatar dropdown-toggle", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <%= link_to "My listings", "#", class: "dropdown-item" %>
             <%= link_to "My bookings", "#", class: "dropdown-item" %>
@@ -42,7 +47,7 @@
           </div>
         </div>
       <% else %>
-        <%= button_to "Login", new_user_session_path, class: "button" %>
+        <%= button_to "Login", new_user_session_path, method: :get, class: "button" %>
       <% end %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       </div>

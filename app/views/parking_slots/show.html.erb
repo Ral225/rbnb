@@ -24,10 +24,10 @@
     <div class="booking-container col-4 justify-content-center">
       <h2> <%= @parkingslot.price.round %> € per day </h2>
       <div class="check-box-container d-flex justify-content-center">
-          <%= simple_form_for @parkingslot do |parking| %>
+          <%= simple_form_for [@parkingslot , @rentalrequest] do |parking| %>
             <div class="check-box-wrapper check-box-container d-flex justify-content-center">
-            <%= parking.input :title, label: 'Check-in', wrapper_html: { class: 'check-in-box' } %>
-            <%= parking.input :title, label: 'Check-out', wrapper_html: { class: 'check-out-box' } %>
+            <%= parking.input :start_date, label: 'Check-in', wrapper_html: { class: 'check-in-box' } %>
+            <%= parking.input :end_date, label: 'Check-out', wrapper_html: { class: 'check-out-box' } %>
             </div>
             <div class="button-form-container d-flex justify-content-center">
             <%= parking.button :submit, 'Make a reservation',  class: "button d-flex"%>
