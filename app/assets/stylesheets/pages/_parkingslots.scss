@@ -1,0 +1,26 @@
+#map {
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  height: 90vh;
+  position: sticky;
+  top: 0;
+}
+
+#title-sticky {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  z-index: 1;
+  top: 57px;
+  background-color: white;
+  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  h1 {
+    margin-top: 0px;
+  }
+
+}
+
+.wrapper {
+  padding: 0% 5%;
+}
