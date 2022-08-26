@@ -1,27 +1,32 @@
 <div class="container">
   <div class="row_one row justify-content-between">
-   <div class="rental-review col-4">
-    <h1>Please confirm your booking</h1>
+   <div class="rental-review col-5">
+    <h1>Confirm your booking</h1>
       <h2><strong>Booking overview</strong></h2>
         <p><%= @parkingslot.description %></p>
         <p>Location: <%= @parkingslot.address %></p>
-        <p> From : <%= @rentalrequest.start_date %> - To : <%= @rentalrequest.end_date %> </p>
+        <p>From: <%= @rentalrequest.start_date %> - To: <%= @rentalrequest.end_date %> </p>
+        <p>Total day(s): <%= (@rentalrequest.end_date - @rentalrequest.start_date ) + 1  %></p>
         <p>Price per day: <%= @parkingslot.price.round %> <%= @parkingslot.currency %></p>
-        <p> Total amount: <%= @rentalrequest.total_amount %></p>
+        <p> Total amount: <%= @rentalrequest.total_amount.round %> <%= @parkingslot.currency %></p>
     </div>
-  <div class="map-rental-request col-6">
+  <div class="map-rental-request col-5">
     <div style="width: auto; height: 399px;"
         data-controller="map"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
         data-map-markers-value="<%= @markers.to_json %>">
     </div>
     </div>
-  <div class="row_two justify-content-between">
-    <div class="paiement-form col-4">
+    </div>
+  <div class="row_two row justify-content-between">
+    <div class=" paiement col-5">
        <h2><strong>Paiement details</strong></h2>
        <div class="paiement-form-container">
         <%= render 'shared/paiement' %>
        </div>
+    </div>
+    <div class="parking-image col-5">
+      <img src="https://media.istockphoto.com/photos/dealer-new-cars-stock-picture-id480652712?k=20&m=480652712&s=612x612&w=0&h=dbyTkQ3-PJJMAlNAR2hGxPWX1ODvSJspuDsdvQmOKlI=" class="w-100 h-100" alt="Responsive image">
     </div>
   </div>
   </div>

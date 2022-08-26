@@ -1,16 +1,29 @@
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Card holder name</label>
-    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Card holder name">
     <small id="emailHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Card number</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Card number">
   </div>
-  <div class="form-check">
+  <div class="card-details row justify-content-between">
+      <div class="exp date col-6">
+          <label for="exampleInputPassword1">Expiring Date</label>
+          <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Exp. Date ">
+      </div>
+      <div class="cvv col-6">
+          <label for="exampleInputPassword1">CVV</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="CVV ">
+      </div>
+  </div>
+    <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label class="form-check-label" for="exampleCheck1">Terms and conditions</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="button row align-self-center">
+  <%= link_to 'Confirm your booking ', 'my_bookings_path', :class => "button text-decoration-none text-justify" %>
+  <%# # <button type="submit" class="button">Confirm your booking </button> %>
+  </div>
 </form>
