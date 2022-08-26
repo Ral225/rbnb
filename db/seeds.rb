@@ -46,9 +46,7 @@ canggu_addresses << "17 Bd de Vaugirard, 75015 Paris, France"
 canggu_addresses << "123 Bd de Port-Royal, 75014 Paris, France"
 canggu_addresses << "1 Bd de Port-Royal, 75014 Paris, France"
 canggu_addresses << "5 Rue des Irlandais, 75005 Paris, France"
-canggu_addresses << "1 Rue des Irlandais, 75005 Paris, Frankreich"
-canggu_addresses << "70 Rue de la Tombe Issoire, 75014 Paris, France"
-canggu_titles = ["Safe Parking Slot", "Underground Parking", "Parking at great location", "Cheap and safe parking", "Parking with security guard at heart of Paris", "Empty garage space", "Large parking space in center", "Paris hotel parking space"]
+canggu_titles = ["Safe Parking Slot", "Underground Parking", "Parking at great location", "Cheap and safe parking", "Parking with security guard at heart of Paris", "Empty garage space", "Large parking space in center", "Berlin hotel parking space"]
 
 all_users = User.all
 
@@ -84,10 +82,10 @@ canggu_addresses.each do |element|
   puts "new parking slot : #{p.address}, owner: #{p.user.email}"
 end
 
-5.times do
+2.times do
   user = all_users.sample
   width = rand(1..10)
-  address = "Paris"
+  address = "Berlin, Germany"
   price = rand(1..10)
   title = "A great parking slot in #{Faker::Address.city}"
   description = Faker::Quotes::Shakespeare.hamlet
@@ -101,21 +99,21 @@ end
 end
 
 
-5.times do
-  user = all_users.sample
-  width = rand(1..10)
-  address = "Paris"
-  price = rand(1..10)
-  title = "A great parking slot in #{Faker::Address.city}"
-  description = Faker::Quotes::Shakespeare.hamlet
-  security = "Camera"
-  weather_protection = "Yes"
-  currency = "Eur"
-  vt = ["car", "motorcycle", "bicycle"]
-  vehicle_type = vt.sample
-  p = ParkingSlot.create!(security: security, weather_protection: weather_protection, currency: currency, user: user, width: width, address: address, price: price, title: title, description: description, vehicle_type: vehicle_type)
-  puts "new parking slot : #{p.address}"
-end
+# 5.times do
+#   user = all_users.sample
+#   width = rand(1..10)
+#   address = "Paris"
+#   price = rand(1..10)
+#   title = "A great parking slot in #{Faker::Address.city}"
+#   description = Faker::Quotes::Shakespeare.hamlet
+#   security = "Camera"
+#   weather_protection = "Yes"
+#   currency = "Eur"
+#   vt = ["car", "motorcycle", "bicycle"]
+#   vehicle_type = vt.sample
+#   p = ParkingSlot.create!(security: security, weather_protection: weather_protection, currency: currency, user: user, width: width, address: address, price: price, title: title, description: description, vehicle_type: vehicle_type)
+#   puts "new parking slot : #{p.address}"
+# end
 
 all_parking_slots = ParkingSlot.all
 index = 0
