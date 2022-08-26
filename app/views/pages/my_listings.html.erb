@@ -1,0 +1,31 @@
+<div class="nav-spacer"></div>
+<div class="container">
+  <h1>Your Parking Slots</h1>
+  <% if @parking_slots %>
+    <%@parking_slots.each do |parking_slot| %>
+        <%= link_to parking_slot_path(parking_slot) do %>
+          <div class="card-large">
+            <div class="row"></div>
+            <img src="https://source.unsplash.com/random/?parking" alt="" class="col-3">
+            <div class="card-large-info col-9">
+              <h2>Listing title: <%= parking_slot.title %></h2>
+              <div class="d-flex justify-content-start">
+                <div>
+                  <p>Price: <%= parking_slot.price.to_i %> € per day</p>
+                  <p>Height: <%= parking_slot.height.to_i %> m</p>
+                  <p>Width: <%= parking_slot.width.to_i %> m</p>
+                </div>
+                <div style="width: 50px;"></div>
+                <div>
+                  <p>Address: <%= parking_slot.address %></p>
+                  <p>Description: <%= parking_slot.description %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+    <% end %>
+  <% else %>
+    <p>You currently have no parking slots</p>
+  <% end %>
+</div>
