@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   def my_bookings
     @bookings = RentalRequest.where(user: @current_user)
   end
+
+  def my_listings
+    @parking_slots = ParkingSlot.where(user: @current_user)
+  end
 end
