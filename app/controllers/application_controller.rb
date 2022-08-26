@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :test_user
-  before_action :current_user
+  # before_action :test_user
+  # before_action :current_user
 
 
 
@@ -14,12 +14,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :phone])
   end
 
-  def current_user
-    return unless session[:user_id]
-    @current_user ||= User.find(session[:user_id].id)
-  end
+  # def current_user
+  #   return unless session[:user_id]
+  #   @current_user ||= User.find(session[:user_id].id)
+  # end
 
-  def test_user
-    session[:user_id] = User.first
-  end
+  # def test_user
+  #   session[:user_id] = User.first
+  # end
 end

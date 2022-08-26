@@ -59,8 +59,8 @@ all_parking_slots = ParkingSlot.all
 10.times do
   user = all_users.sample
   parking_slot = all_parking_slots.sample
-  start_date = Faker::Date.birthday
-  end_date = Faker::Date.forward
+  start_date = Faker::Date.forward
+  end_date = start_date.next_day(3)
   total_amount = 3
   st = "Pending"
   r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
@@ -72,8 +72,8 @@ end
 # declined
 user = User.first
 parking_slot = all_parking_slots.sample
-start_date = Faker::Date.birthday
-end_date = Faker::Date.forward
+start_date = Faker::Date.forward
+end_date = start_date.next_day(3)
 total_amount = 3
 st = "Declined"
 r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
@@ -81,8 +81,8 @@ puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}"
 
 # accepted
 parking_slot = all_parking_slots.sample
-start_date = Faker::Date.birthday
-end_date = Faker::Date.forward
+start_date = Faker::Date.forward
+end_date = start_date.next_day(3)
 total_amount = 3
 st = "Confirmed"
 r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
@@ -90,8 +90,8 @@ puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}"
 
 # pending
 parking_slot = all_parking_slots.sample
-start_date = Faker::Date.birthday
-end_date = Faker::Date.forward
+start_date = Faker::Date.forward
+end_date = start_date.next_day(3)
 total_amount = 3
 st = "Pending"
 r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
