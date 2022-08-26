@@ -1,21 +1,26 @@
 <div class="container">
   <div class="row_one row justify-content-between">
-   <div class="rental-review col-6">
-    <h1>Please confirm your review </h1>
-      <h2>Booking overview</h2>
-        <p> <%= @parkingslot.title %></p>
+   <div class="rental-review col-4">
+    <h1>Please confirm your booking</h1>
+      <h2><strong>Booking overview</strong></h2>
         <p><%= @parkingslot.description %></p>
+        <p><%= @rentalrequest.start_date %></p>
         <p>Location: <%= @parkingslot.address %></p>
-        <p>Width: <%= @parkingslot.width %> m - Height: <%= @parkingslot.height %> m </p>
-        <p>Security items: <%= @parkingslot.security %></p>
         <p>Price per day: <%= @parkingslot.price.round %> <%= @parkingslot.currency %></p>
     </div>
-  <div class="map-rental-request col-4">
+  <div class="map-rental-request col-6">
     <div style="width: auto; height: 399px;"
         data-controller="map"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
         data-map-markers-value="<%= @markers.to_json %>">
     </div>
-
+    </div>
+  <div class="row_two justify-content-between">
+    <div class="paiement-form col4">
+       <h2><strong>Paiement details</strong></h2>
+       <div class="paiement-form-container">
+       </div>
+    </div>
+  </div>
   </div>
 </div>

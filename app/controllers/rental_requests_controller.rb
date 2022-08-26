@@ -3,11 +3,11 @@ class RentalRequestsController < ApplicationController
   def new
     @rentalrequest = RentalRequest.new
     @parkingslot = ParkingSlot.find(params[:parking_slot_id])
-    # @markers = @parkingslot.geocoded.map do |parking| {
-    #   lat: parking.latitude,
-    #   lng: parking.longitude
-    # }
-    # end
+    @markers = ParkingSlot.where(address: @parkingslot.address).geocoded.map do |parking| {
+      lat: parking.latitude,
+      lng: parking.longitude
+    }
+  end
 
   end
 
@@ -19,7 +19,7 @@ class RentalRequestsController < ApplicationController
     # add the parling slot id to rental request before saving
     @rentalrequest.parking_slot = @parkingslot
     @rentalrequest.total_amount = @parkingslot.price * ((@rentalrequest.end_date - @rentalrequest.start_date) + 1 )
-    # We need to solde that pbm
+    # We need to solve that pbm
     @rentalrequest.user_id = User.first.id
     @rentalrequest.save
 
