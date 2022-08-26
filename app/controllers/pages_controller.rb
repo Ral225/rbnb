@@ -10,4 +10,8 @@ class PagesController < ApplicationController
     The total amount was be subtracted from your payment method."
     @message_declined = "Declined - your booking request has been declined."
   end
+
+  def my_listings
+    @parking_slots = ParkingSlot.where(user: @current_user)
+  end
 end
