@@ -39,23 +39,23 @@ end
 
 # create parking lots
 canggu_addresses = []
-canggu_addresses << "Jl. Tanah Barak No.35A, Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Jl. Tanah Barak No.1, Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Jl. Tanah Barak No.40, Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Jl. Pantai Berawa No.150,  Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Jl. Pantai Batu Bolong No.39a, Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Jl. Pantai Batu Bolong No.117X, Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Eco Beach Canggu, Batu Mejan Street,Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Jl. Pantai Batu Bolong No.1, Canggu, 80361, Kuta, Badung, Bali, Indonesien"
-canggu_addresses << "Jl. Pantai Batu Bolong No.17, Canggu, Bali, Indonesia"
-canggu_titles = ["Safe Parking Slot", "Underground Parking", "Parking at great location", "Cheap and safe parking", "Parking with security guard at heart of Canggu", "Empty garage space", "Large parking space in center", "Canggu hotel parking space"]
+canggu_addresses << "78-80 Av. du Général Leclerc, 75014 Paris, France"
+canggu_addresses << "41 Av. du Général Leclerc, 75014 Paris, France"
+canggu_addresses << "88 Rue de la Tombe Issoire, 75014 Paris, France"
+canggu_addresses << "17 Bd de Vaugirard, 75015 Paris, France"
+canggu_addresses << "123 Bd de Port-Royal, 75014 Paris, France"
+canggu_addresses << "1 Bd de Port-Royal, 75014 Paris, France"
+canggu_addresses << "5 Rue des Irlandais, 75005 Paris, France"
+canggu_addresses << "1 Rue des Irlandais, 75005 Paris, Frankreich"
+canggu_addresses << "70 Rue de la Tombe Issoire, 75014 Paris, France"
+canggu_titles = ["Safe Parking Slot", "Underground Parking", "Parking at great location", "Cheap and safe parking", "Parking with security guard at heart of Paris", "Empty garage space", "Large parking space in center", "Paris hotel parking space"]
 
 all_users = User.all
 
 #parking lot tom
 user = tom
 width = rand(1..10)
-address = "Batu Mejan Street, Canggu, Bali, Indonesia"
+address = "60 Rue de la Tombe Issoire, 75014 Paris, France"
 price = rand(1..10)
 title = "A great parking slot in #{Faker::Address.city}"
 description = Faker::Quotes::Shakespeare.hamlet
