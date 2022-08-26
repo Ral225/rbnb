@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def my_listings
-    @parking_slots = ParkingSlot.where(user: @current_user)
+    @parking_slots = ParkingSlot.where(user: current_user)
   end
 
   def my_requests
