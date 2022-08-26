@@ -20,11 +20,12 @@ class RentalRequestsController < ApplicationController
     @rentalrequest.parking_slot = @parkingslot
     @rentalrequest.total_amount = @parkingslot.price * ((@rentalrequest.end_date - @rentalrequest.start_date) + 1 )
     # We need to solve that pbm
-    @rentalrequest.user_id = User.first.id
-    @rentalrequest.save
+    @rentalrequest.user = current_user
+    @rentalrequest.save!
 
-    @date = @rentalrequest.end_date - @rentalrequest.start_date + 1
-    redirect_to new_parking_slot_rental_request_path(@parkingslot, id:@rentalrequest.id)
+
+    # @date = @rentalrequest.end_date - @rentalrequest.start_date + 1
+    redirect_to new_parking_slot_rental_request_path(@parkingslot, id: @rentalrequest.id)
   end
 
 private
