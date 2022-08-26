@@ -29,6 +29,7 @@
     font-weight: bold;
     margin: 0;
     padding: 0;
+    color: $black !important;
   }
 
   p {
@@ -129,4 +130,8 @@ a {
 
 .card-status-declined {
   background: rgba(204, 33, 33, 0.219);
+}
+
+p {
+  color: $black;
 }

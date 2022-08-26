@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-  font-family: Verdana, sans-serif;
+  font-family: Verdana, sans-serif  !important;
   color: $black;
   height: 100%;
   background-color: white;
@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 26px !important;
   padding-top: 10px;
   padding-bottom: 20px;
 }
@@ -39,6 +39,7 @@ h2 {
   font-size: 22px;
   padding-top: 10px;
   padding-bottom: 15px;
+  color: $black;
 }
 
 p {
