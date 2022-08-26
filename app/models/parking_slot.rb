@@ -17,10 +17,10 @@ class ParkingSlot < ApplicationRecord
   validates :security, presence: true, inclusion: { in: SECURITY }
   validates :currency, presence: true
 
-  # include PgSearch::Model
-  # pg_search_scope :search_by_address,
-  #   against: [ :address ],
-  #   using: {
-  #     tsearch: { prefix: true }
-  #   }
+  include PgSearch::Model
+  pg_search_scope :search_by_address,
+    against: [ :address ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

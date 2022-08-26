@@ -34,6 +34,8 @@
 
     ::placeholder {
       color: $dark-grey;
+      text-align: center;
+      justify-content: center;
     }
 
     .no-border  {
@@ -158,4 +160,8 @@ i::before {
     ::placeholder {
     color: $dark-grey;
   }
+}
+
+.large {
+  max-width: 150px !important;
 }
