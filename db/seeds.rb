@@ -25,7 +25,7 @@ all_users = User.all
 10.times do
   user = all_users.sample
   width = rand(1..10)
-  address = Faker::Address.full_address
+  address = "Bali, Canggu"
   price = rand(1..10)
   title = "A great parking slot in #{Faker::Address.city}"
   description = Faker::Quotes::Shakespeare.hamlet
