@@ -2,8 +2,8 @@ class ParkingSlotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     if params[:query].present?
-     # @users = User.search(params[:query])
-      @parkingslots = ParkingSlot.where(sql_query, query: "%#{params[:query]}%")
+      #@parkingslots = ParkingSlot.select {|parking|parking.address == params[:query] }
+      @parkingslots = ParkingSlot.search_by_address(params[:query])
     else
       @parkingslots = ParkingSlot.all
     end

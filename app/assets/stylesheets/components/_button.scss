@@ -25,3 +25,23 @@
  .button-gradient:hover {
   background-image: linear-gradient(to right, $green 30%, rgba(255,0,0,0));
 }
+
+.button-confirm {
+  height: 42px;
+  border: none;
+  width: 190px;
+  background: $blue;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  border-radius: 50px;
+  color: white;
+  display: inline-block;
+  transition: all 0.5s ease;
+  padding-top: 10px;
+ }
+
+ .button-confirm:hover {
+  background: $blue-green;
+  color:white;
+}

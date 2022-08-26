@@ -5,7 +5,7 @@
   <h1>Your bookings</h1>
   <% if @bookings %>
     <%@bookings.each do |booking| %>
-      <%= link_to parking_slot_path(booking), class:"text-decoration-none" do %>
+      <%= link_to parking_slot_path(booking.parking_slot), class:"text-decoration-none" do %>
           <div class="card-large">
             <div class="row"></div>
             <img src="https://source.unsplash.com/random/?parking" alt="" class="col-3">
