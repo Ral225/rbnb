@@ -87,7 +87,7 @@ end
 5.times do
   user = all_users.sample
   width = rand(1..10)
-  address = "Paris"
+  address = "Paris, France"
   price = rand(1..10)
   title = "A great parking slot in #{Faker::Address.city}"
   description = Faker::Quotes::Shakespeare.hamlet
@@ -104,7 +104,7 @@ end
 5.times do
   user = all_users.sample
   width = rand(1..10)
-  address = "Paris"
+  address = "Paris, France"
   price = rand(1..10)
   title = "A great parking slot in #{Faker::Address.city}"
   description = Faker::Quotes::Shakespeare.hamlet
