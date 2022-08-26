@@ -124,6 +124,7 @@ canggu_titles.each do |element|
  all_parking_slots[index].title = element
  index += 1
  puts "parking slot title changed: #{element}"
+
 end
 
 
@@ -145,6 +146,7 @@ end
 puts "test data for rental requests for same user with different statuses for testing my-bookings"
 
 # declined
+
 user = tom
 parking_slot = all_parking_slots[5]
 start_date = Faker::Date.between(from: '2022-05-23', to: '2022-09-25')
@@ -162,6 +164,7 @@ start_date = Faker::Date.between(from: '2022-05-23', to: '2022-09-25')
 add_days = rand(1..10)
 end_date = start_date + add_days
 total_amount = add_days
+
 st = "Confirmed"
 r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
   puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}, requested_by: #{r.user.email}"
@@ -197,6 +200,7 @@ start_date = Faker::Date.between(from: '2022-05-23', to: '2022-09-25')
 add_days = rand(1..10)
 end_date = start_date + add_days
 total_amount = add_days
+
 st = "Pending"
 r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
   puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date},parking lot owner: #{r.parking_slot.user.email}"

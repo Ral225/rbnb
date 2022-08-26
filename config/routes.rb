@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get "/my-bookings", to: "pages#my_bookings"
   get "/my-listings", to: "pages#my_listings"
+  get "/my-pending-requests", to: "pages#my_requests"
   root to: "parking_slots#index"
 
 

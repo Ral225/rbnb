@@ -14,4 +14,11 @@ class PagesController < ApplicationController
   def my_listings
     @parking_slots = ParkingSlot.where(user: current_user)
   end
+
+  def my_requests
+    # @rental_requests = RentalRequest.joins(:parking_slot).where(user: current_user)
+    # @rental_requests = current_user.parking_slots.where.associated(:rental_requests)
+    @all_rental_requests = current_user.parking_slots.extract_associated(:rental_requests).flatten
+    @pending_rental_requests = @all_rental_requests.select { |rental_request| rental_request.status = "pending" }
+  end
 end
