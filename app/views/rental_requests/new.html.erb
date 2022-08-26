@@ -5,6 +5,8 @@
       <h2><strong>Booking overview</strong></h2>
         <p><%= @parkingslot.description %></p>
         <p><%= @rentalrequest.start_date %></p>
+        <p><%= @rentalrequest.end_date %></p>
+        <p><%= @rentalrequest.total_amount %></p>
         <p>Location: <%= @parkingslot.address %></p>
         <p>Price per day: <%= @parkingslot.price.round %> <%= @parkingslot.currency %></p>
     </div>

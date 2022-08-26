@@ -1,8 +1,9 @@
 class RentalRequestsController < ApplicationController
 
   def new
-    @rentalrequest = RentalRequest.new
+    @rentalrequest = RentalRequest.find(params[:id])
     @parkingslot = ParkingSlot.find(params[:parking_slot_id])
+    # @rentalrequest.parkingslot = @parking_slot
     @markers = ParkingSlot.where(address: @parkingslot.address).geocoded.map do |parking| {
       lat: parking.latitude,
       lng: parking.longitude
@@ -23,7 +24,7 @@ class RentalRequestsController < ApplicationController
     @rentalrequest.user_id = User.first.id
     @rentalrequest.save
 
-    redirect_to new_parking_slot_rental_request_path(@parkingslot)
+    redirect_to new_parking_slot_rental_request_path(@parkingslot, id:@rentalrequest.id)
 
   end
 
