@@ -25,7 +25,11 @@ all_users = User.all
 10.times do
   user = all_users.sample
   width = rand(1..10)
+<<<<<<< HEAD
   address = "Berlin, Deutschland"
+=======
+  address = "Bali, Canggu"
+>>>>>>> 82e6366872a96e267743cbe6238fdcaab4bef11f
   price = rand(1..10)
   title = "A great parking slot in #{Faker::Address.city}"
   description = Faker::Quotes::Shakespeare.hamlet
@@ -55,6 +59,7 @@ end
 end
 
 all_parking_slots = ParkingSlot.all
+
 10.times do
   user = all_users.sample
   parking_slot = all_parking_slots.sample
@@ -66,13 +71,32 @@ all_parking_slots = ParkingSlot.all
   puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}"
 end
 
-3.times do
-  user = User.first
-  parking_slot = all_parking_slots.sample
-  start_date = Faker::Date.birthday
-  end_date = Faker::Date.forward
-  total_amount = 3
-  st = "Pending"
-  r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
-  puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}"
-end
+
+# test data for rental requests for same user with different statuses for testing my-bookings
+# declined
+user = User.first
+parking_slot = all_parking_slots.sample
+start_date = Faker::Date.birthday
+end_date = Faker::Date.forward
+total_amount = 3
+st = "Declined"
+r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
+puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}"
+
+# accepted
+parking_slot = all_parking_slots.sample
+start_date = Faker::Date.birthday
+end_date = Faker::Date.forward
+total_amount = 3
+st = "Confirmed"
+r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
+puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}"
+
+# pending
+parking_slot = all_parking_slots.sample
+start_date = Faker::Date.birthday
+end_date = Faker::Date.forward
+total_amount = 3
+st = "Pending"
+r = RentalRequest.create!(total_amount: total_amount, user: user, status: st, parking_slot: parking_slot, start_date: start_date, end_date: end_date)
+puts "rental request start_date: #{r.start_date}, end_date: #{r.end_date}"

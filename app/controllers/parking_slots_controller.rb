@@ -1,5 +1,5 @@
 class ParkingSlotsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     if params[:query].present?
      # @users = User.search(params[:query])

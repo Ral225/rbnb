@@ -2,7 +2,7 @@ class RentalRequest < ApplicationRecord
   belongs_to :user
   belongs_to :parking_slot
 
-  STATUS = ['Pending', 'Approved', 'Denied']
+  STATUS = ['Pending', 'Confirmed', 'Declined']
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :start_date, presence: true

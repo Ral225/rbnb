@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
-
   before_action :test_user
   before_action :current_user
+
 
 
   def configure_permitted_parameters
@@ -20,6 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   def test_user
-    session[:user_id]=User.first
+    session[:user_id] = User.first
   end
 end
