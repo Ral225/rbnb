@@ -8,8 +8,7 @@ class RentalRequestsController < ApplicationController
       lat: parking.latitude,
       lng: parking.longitude
     }
-  end
-
+    end
   end
 
   def create
@@ -30,9 +29,7 @@ class RentalRequestsController < ApplicationController
 
 private
 
-def rentalrequest_param
-  params.require(:rental_request).permit(:start_date, :end_date)
-end
-
-
+  def rentalrequest_param
+    params.require(:rental_request).permit(:start_date, :end_date)
+  end
 end

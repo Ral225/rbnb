@@ -9,7 +9,7 @@
     <label for="exampleInputPassword1">Card number</label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Card number">
   </div>
-  <div class="card-details row justify-content-between">
+  <div class="card-details justify-content-between">
       <div class="exp date col-6">
           <label for="exampleInputPassword1">Expiring Date</label>
           <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Exp. Date ">
@@ -23,8 +23,8 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Terms and conditions</label>
   </div>
-  <div class="button row align-self-center">
-  <%= link_to 'Confirm your booking ', my_bookings_path, :class => "button text-decoration-none text-justify" %>
+  <div class="confirm-button row align-self-center">
+  <%= link_to 'Confirm your booking ', my_bookings_path, :class => "button text-decoration-none" %>
   <%# # <button type="submit" class="button">Confirm your booking </button> %>
   </div>
 </form>

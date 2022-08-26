@@ -47,8 +47,6 @@
   text-align: center;
   padding: 2px;
   font-weight: bold;
-
-
   background: $white;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 7px;
@@ -57,7 +55,6 @@
 .form-date {
   border: none;
   width: 70%;
-
   margin-left: 40px;
   // margin-right: 40px;
   display: block;
@@ -87,12 +84,8 @@
 
 hr {
   display: block;
-  margin-end: auto;
-  margin-start: auto;
   border: 2px inset;
   overflow: hidden;
-  margin-before: 0.5em;
-  margin-after: 0.5em;
 }
 
 .button-form-container {
