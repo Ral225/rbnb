@@ -34,6 +34,8 @@
 
     ::placeholder {
       color: $dark-grey;
+      text-align: center;
+      justify-content: center;
     }
 
     .no-border  {
@@ -153,6 +155,13 @@ i::before {
   padding: 0px !important;
 }
 
-.mapboxgl-ctrl-geocoder--input::placeholder {
-  color: $dark-grey;
+.mapboxgl-ctrl-geocoder--input {
+  outline: none !important;
+    ::placeholder {
+    color: $dark-grey;
+  }
+}
+
+.large {
+  max-width: 150px !important;
 }

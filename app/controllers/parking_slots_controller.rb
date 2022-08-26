@@ -1,7 +1,12 @@
 class ParkingSlotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @parkingslots = ParkingSlot.all
+    if params[:query].present?
+      #@parkingslots = ParkingSlot.select {|parking|parking.address == params[:query] }
+      @parkingslots = ParkingSlot.search_by_address(params[:query])
+    else
+      @parkingslots = ParkingSlot.all
+    end
       # The `geocoded` scope filters only flats with coordinates
       @markers = ParkingSlot.geocoded.map do |parking| {
         lat: parking.latitude,

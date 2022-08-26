@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   get "/my-bookings", to: "pages#my_bookings"
-  # get "/", to: "pages#home"
-  root to: "parking_lots#index"
+  get "/my-listings", to: "pages#my_listings"
+  root to: "parking_slots#index"
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
