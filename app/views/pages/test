@@ -1,0 +1,35 @@
+<div class="banner">
+  <div class="banner__content">
+    <img src="//source.unsplash.com/1500x800?office" alt="" class="active">
+    <img src="//source.unsplash.com/1500x800?desk" alt="" class="">
+    <img src="//source.unsplash.com/1500x800?typing" alt="" class="">
+    <img src="//source.unsplash.com/1500x800?keyboard" alt="" class="">
+    <img src="//source.unsplash.com/1500x800?desktop" alt="" class="">
+    <img src="//source.unsplash.com/1500x800?thinking" alt="" class="">
+  </div>
+
+  <div class="banner__form">
+    <form action="#" class="form__content">
+      <h1 class="display-2 font-weight-bold">Find your desk.</h1>
+      <p>Check for available coworking spaces in your area.</p>
+      <div class="form-group">
+        <label for=""></label>
+        <input type="text" class="form-control" placeholder="Location, Postcode...">
+      </div>
+      <div class="form-row">
+        <div class="form-group col">
+          <select type="tedext" class="form-control" required>
+            <option value="">Fixed Desk</option>
+            <option value="">Hot Desk</option>
+            <option value="">Meeting Room</option>
+            <option value="">Private Office</option>
+          </select>
+        </div>
+        <div class="form-group col-auto">
+          <button class="btn t-b-primary text-uppercase">GO</button>
+        </div>
+      </div
+    </form>
+  </div>
+
+</div>
