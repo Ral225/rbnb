@@ -1,0 +1,28 @@
+<div class="nav-spacer"></div>
+<div class="container">
+  <h1>Pending Requests</h1>
+  <% if @pending_rental_requests %>
+    <% @pending_rental_requests.each do |rental_request| %>
+        <div class="card-small">
+          <div class="card-small-info col-1">
+            <%= image_tag("empty_user.png", class: "avatar") %>
+          </div>
+          <div class="card-small-info col-8">
+            <h2>Request from <%= rental_request.user.first_name %></h2>
+            <p>Parking Slot: <%= rental_request.parking_slot.title %></p>
+            <p>from <%= rental_request.start_date %> to <%= rental_request.end_date %>
+          </div>
+          <div class="card-small-info col-3">
+            <%= link_to my_pending_requests_path do %>
+              <%= image_tag("yes_button.png") %>
+            <% end %>
+            <%= link_to my_pending_requests_path do %>
+              <%= image_tag("no_button.png") %>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+  <% else %>
+    <p>You currently have no pending requests</p>
+  <% end %>
+</div>
