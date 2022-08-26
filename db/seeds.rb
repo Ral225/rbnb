@@ -37,6 +37,23 @@ all_users = User.all
   p = ParkingSlot.create!(security: security, weather_protection: weather_protection, currency: currency, user: user, width: width, address: address, price: price, title: title, description: description, vehicle_type: vehicle_type)
   puts "new parking slot : #{p.address}"
 end
+
+5.times do
+  user = all_users.sample
+  width = rand(1..10)
+  address = "Paris"
+  price = rand(1..10)
+  title = "A great parking slot in #{Faker::Address.city}"
+  description = Faker::Quotes::Shakespeare.hamlet
+  security = "Camera"
+  weather_protection = "Yes"
+  currency = "Eur"
+  vt = ["car", "motorcycle", "bicycle"]
+  vehicle_type = vt.sample
+  p = ParkingSlot.create!(security: security, weather_protection: weather_protection, currency: currency, user: user, width: width, address: address, price: price, title: title, description: description, vehicle_type: vehicle_type)
+  puts "new parking slot : #{p.address}"
+end
+
 all_parking_slots = ParkingSlot.all
 
 10.times do
