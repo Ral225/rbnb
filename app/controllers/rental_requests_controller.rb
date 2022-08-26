@@ -8,8 +8,7 @@ class RentalRequestsController < ApplicationController
       lat: parking.latitude,
       lng: parking.longitude
     }
-  end
-
+    end
   end
 
   def create
@@ -24,15 +23,13 @@ class RentalRequestsController < ApplicationController
     @rentalrequest.user_id = User.first.id
     @rentalrequest.save
 
+    @date = @rentalrequest.end_date - @rentalrequest.start_date + 1
     redirect_to new_parking_slot_rental_request_path(@parkingslot, id:@rentalrequest.id)
-
   end
 
 private
 
-def rentalrequest_param
-  params.require(:rental_request).permit(:start_date, :end_date)
-end
-
-
+  def rentalrequest_param
+    params.require(:rental_request).permit(:start_date, :end_date)
+  end
 end
