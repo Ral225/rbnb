@@ -6,7 +6,7 @@
         <p><%= @parkingslot.description %></p>
         <p>Location: <%= @parkingslot.address %></p>
         <p>From: <%= @rentalrequest.start_date %> - To: <%= @rentalrequest.end_date %> </p>
-        <p>Total day(s): <%= @rentalrequest.end_date - @rentalrequest.start_date + 1  %></p>
+        <p>Total day(s): <%= (@rentalrequest.end_date - @rentalrequest.start_date).to_i + 1  %></p>
         <p>Price per day: <%= @parkingslot.price.round %> <%= @parkingslot.currency %></p>
         <p> Total amount: <%= @rentalrequest.total_amount.round %> <%= @parkingslot.currency %></p>
     </div>

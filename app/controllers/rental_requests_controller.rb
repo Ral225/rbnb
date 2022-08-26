@@ -23,8 +23,8 @@ class RentalRequestsController < ApplicationController
     @rentalrequest.user_id = User.first.id
     @rentalrequest.save
 
+    @date = @rentalrequest.end_date - @rentalrequest.start_date + 1
     redirect_to new_parking_slot_rental_request_path(@parkingslot, id:@rentalrequest.id)
-
   end
 
 private

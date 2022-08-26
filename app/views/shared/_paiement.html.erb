@@ -9,12 +9,12 @@
     <label for="exampleInputPassword1">Card number</label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Card number">
   </div>
-  <div class="card-details justify-content-between">
-      <div class="exp date col-6">
+  <div class="card-details justify-content-between d-flex">
+      <div class="exp-date col-6" style="margin-right: 10px">
           <label for="exampleInputPassword1">Expiring Date</label>
           <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Exp. Date ">
       </div>
-      <div class="cvv col-6 justify-content-center">
+      <div class="cvv ml-1 col-6 justify-content-center">
           <label for="exampleInputPassword1">CVV</label>
           <input type="text" class="form-control" id="exampleInputPassword1" placeholder="CVV ">
       </div>
@@ -24,7 +24,7 @@
     <label class="form-check-label" for="exampleCheck1">Terms and conditions</label>
   </div>
   <div class="confirm-button row align-self-center">
-  <%= link_to 'Confirm your booking ', my_bookings_path, :class => "button text-decoration-none" %>
+  <%= link_to 'Confirm your booking ', my_bookings_path, :class => "button-confirm text-decoration-none" %>
   <%# # <button type="submit" class="button">Confirm your booking </button> %>
   </div>
 </form>
