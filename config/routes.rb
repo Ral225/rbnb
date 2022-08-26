@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/my-listings", to: "pages#my_listings"
   root to: "parking_slots#index"
 
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
